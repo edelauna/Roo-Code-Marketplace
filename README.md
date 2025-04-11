@@ -94,14 +94,10 @@ packages/
 │   │   └── platform-user-mode/
 │   │       ├── metadata.en.yml
 │   │       └── mode.md
-│   ├── mcp-servers/
-│   │   └── data-validator/
-│   │       ├── metadata.en.yml
-│   │       └── server.js
-│   └── storage-systems/
-│       └── data-store/
+│   └── mcp-servers/
+│       └── data-validator/
 │           ├── metadata.en.yml
-│           └── storage.js
+│           └── server.js
 └── metadata.en.yml
 ```
 
@@ -133,7 +129,7 @@ tags: ["example", "template"]
 ```yaml
 name: "Component Name"
 description: "Detailed description of the component"
-type: "mode|mcp-server|storage|package|group"
+type: "mode|mcp server|prompt|package"
 version: "1.0.0"
 tags: ["tag1", "tag2"]
 sourceUrl: "https://github.com/username/repo"  # Optional
@@ -161,7 +157,7 @@ tags: ["package", "extended"]
 items:
   - type: "mode"
     path: "../shared-modes/admin-mode"  # Reference to a mode outside the package
-  - type: "mcp-server"
+  - type: "mcp server"
     path: "../../global-servers/validator"  # Reference to a server in parent directory
 ```
 
@@ -183,21 +179,21 @@ Example localized metadata files:
 # metadata.en.yml (required)
 name: "Data Processor"
 description: "Processes data files efficiently"
-type: "mcp-server"
+type: "mcp server"
 version: "1.0.0"
 tags: ["processing", "data"]
 
 # metadata.es.yml (optional)
 name: "Procesador de Datos"
 description: "Procesa archivos de datos de manera eficiente"
-type: "mcp-server"
+type: "mcp server"
 version: "1.0.0"
 tags: ["procesamiento", "datos"]
 
 # metadata.ja.yml (optional)
 name: "データプロセッサー"
 description: "データファイルを効率的に処理"
-type: "mcp-server"
+type: "mcp server"
 version: "1.0.0"
 tags: ["処理", "データ"]
 ```
@@ -219,7 +215,7 @@ To test this repository with the Roo-Code Package Manager:
 
 This template includes examples of all three organization patterns:
 
-1. Simple items in the root `/modes`, `/mcp-servers`, and `/storage-systems` directories
+1. Simple items in the root `/modes` and `/mcp-servers` directories
 2. Grouped items in the `/groups` directory
 3. Package examples in the `/packages` directory
 

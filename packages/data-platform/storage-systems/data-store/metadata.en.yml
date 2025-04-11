@@ -1,6 +1,0 @@
-name: "Data Store"
-description: "A storage system for managing data platform assets with versioning and access control"
-type: "storage"
-version: "1.0.0"
-tags: ["storage", "data-management", "versioning", "access-control", "data-platform"]
-sourceUrl: "https://github.com/example/data-platform/storage-systems/data-store"

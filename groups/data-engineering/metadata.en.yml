@@ -1,5 +1,4 @@
 name: "Data Engineering Tools"
 description: "A collection of data engineering roles and tools"
-type: "group"
 version: "1.0.0"
 tags: ["data-engineering", "data", "analytics"]

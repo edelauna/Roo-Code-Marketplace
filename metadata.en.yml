@@ -1,4 +1,3 @@
-name: "Roo-Code Package Manager Examples"
-description: "A comprehensive collection of package manager examples demonstrating different organization patterns"
-version: "1.0.0"
-tags: ["examples", "template", "patterns"]
+name: Roo-Code Package Manager Examples
+description: A comprehensive collection of package manager examples
+version: 1.0.0
