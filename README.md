@@ -1,44 +1,42 @@
-# Package Manager Template
+# Minimal Package Manager Repository
 
-This template provides a basic structure for creating a package manager source repository. The structure follows the required format for Roo Code's package manager.
+This is a minimal example of a package manager repository structure that meets the basic requirements. The structure is intentionally kept as simple as possible to help diagnose any validation issues.
 
 ## Structure
 
 ```
 /
 ├── metadata.en.yml         # Required: Repository metadata
-└── mcp-servers/           # Required: At least one of: mcp-servers, roles, storage-systems, or items
-    └── example-server/    
+└── mcp-servers/           # Optional: Directory for MCP servers
+    └── test-server/       
         └── metadata.en.yml
 ```
 
-## Required Files
-
-### Root metadata.en.yml
+## metadata.en.yml
 ```yaml
-name: "Your Repository Name"
-description: "Your repository description"
-version: "1.0.0"
+name: Test Repository
+description: A minimal test repository
+version: 1.0.0
 ```
 
-### MCP Server metadata.en.yml
+## mcp-servers/test-server/metadata.en.yml
 ```yaml
-name: "Your MCP Server Name"
-description: "Your MCP server description"
-type: "mcp server"
-version: "1.0.0"
+name: Test Server
+description: A minimal test server
+type: mcp server
+version: 1.0.0
 ```
 
-## Usage
+## Key Points
 
-1. Copy this template to create your own package manager repository
-2. Update the metadata.en.yml with your repository information
-3. Add your MCP servers, roles, or other components
-4. Each component must have its own metadata.en.yml file with the required fields
+1. Only metadata.en.yml is strictly required
+2. The metadata.en.yml file must have exactly these fields:
+   - name (string)
+   - description (string)
+   - version (in x.x.x format)
+3. No quotes around values
+4. No extra fields
+5. No special characters
+6. No complex YAML features (arrays, nested objects, etc.)
 
-## Validation Requirements
-
-- The root metadata.en.yml must have name, description, and version fields
-- Version must be in semver format (e.g., 1.0.0)
-- The repository must have at least one of: mcp-servers, roles, storage-systems, or items directories
-- Each component must have a metadata.en.yml with the required fields including the correct type
+Try copying this exact structure to your GitHub repository to test. The validation should pass with this minimal setup.
