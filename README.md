@@ -1,49 +1,44 @@
-# Minimal Package Manager Repository
+# Package Manager Template
 
-This is a minimal example of a package manager repository structure that meets the basic requirements. The structure is intentionally kept as simple as possible to help diagnose any validation issues.
+This template provides a basic structure for creating a package manager source repository. The structure follows the required format for Roo Code's package manager.
 
 ## Structure
 
 ```
 /
-├── metadata.en.yml         # Required: Repository metadata (must be exactly this name)
-└── mcp-servers/           # Optional: Directory for MCP servers
-    └── test-server/       # Must be a directory
-        └── metadata.en.yml # Must match pattern metadata.[locale].yml
+├── metadata.en.yml         # Required: Repository metadata
+└── mcp-servers/           # Required: At least one of: mcp-servers, roles, storage-systems, or items
+    └── example-server/    
+        └── metadata.en.yml
 ```
 
-## metadata.en.yml
+## Required Files
+
+### Root metadata.en.yml
 ```yaml
-name: Test Repository
-description: A minimal test repository
-version: 1.0.0
+name: "Your Repository Name"
+description: "Your repository description"
+version: "1.0.0"
 ```
 
-## mcp-servers/test-server/metadata.en.yml
+### MCP Server metadata.en.yml
 ```yaml
-name: Test Server
-description: A minimal test server
-type: mcp server
-version: 1.0.0
+name: "Your MCP Server Name"
+description: "Your MCP server description"
+type: "mcp server"
+version: "1.0.0"
 ```
 
-## Key Points
+## Usage
 
-1. File names must be exactly:
-   - metadata.en.yml (not metadata.yml or any other variation)
-2. Components must be in directories
-3. No empty lines in YAML files
-4. No quotes around values
-5. No extra fields
-6. No special characters
-7. No complex YAML features (arrays, nested objects, etc.)
+1. Copy this template to create your own package manager repository
+2. Update the metadata.en.yml with your repository information
+3. Add your MCP servers, roles, or other components
+4. Each component must have its own metadata.en.yml file with the required fields
 
-Try copying this exact structure to your GitHub repository to test. The validation should pass with this minimal setup.
+## Validation Requirements
 
-## Validation Process
-
-1. First, it checks for metadata.en.yml in the root
-2. Then it scans for component directories
-3. For each directory, it looks for metadata.en.yml files
-4. Each metadata file is validated for required fields
-5. Component metadata must have a valid type ("mcp server", "mode", "prompt", or "package")
+- The root metadata.en.yml must have name, description, and version fields
+- Version must be in semver format (e.g., 1.0.0)
+- The repository must have at least one of: mcp-servers, roles, storage-systems, or items directories
+- Each component must have a metadata.en.yml with the required fields including the correct type
