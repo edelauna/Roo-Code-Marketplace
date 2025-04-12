@@ -7,7 +7,7 @@ This template provides a basic structure for creating a package manager source r
 ```
 /
 ├── metadata.en.yml         # Required: Repository metadata
-└── mcp-servers/           # Required: At least one of: mcp-servers, roles, storage-systems, or items
+└── mcp servers/           # Required: At least one of: mcp servers, roles, storage systems, or items
     └── example-server/    
         └── metadata.en.yml
 ```
@@ -40,5 +40,5 @@ version: "1.0.0"
 
 - The root metadata.en.yml must have name, description, and version fields
 - Version must be in semver format (e.g., 1.0.0)
-- The repository must have at least one of: mcp-servers, roles, storage-systems, or items directories
+- The repository must have at least one of: mcp servers, roles, storage systems, or items directories
 - Each component must have a metadata.en.yml with the required fields including the correct type
