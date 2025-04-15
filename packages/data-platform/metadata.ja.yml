@@ -3,3 +3,5 @@ description: "ロール、サーバー、ストレージシステムを含む完
 type: "package"
 version: "1.0.0"
 tags: ["データプラットフォーム", "エンタープライズ", "データエンジニアリング", "完全ソリューション"]
+author: "JB Brown"
+authorUrl: "https://www.linkedin.com/in/jbbrown1/"

@@ -4,3 +4,5 @@ type: "mcp server"
 version: "1.0.0"
 tags: ["file-analyzer", "code-quality", "security", "performance"]
 sourceUrl: "https://github.com/roo-team/file-analyzer-server"
+author: "JB Brown"
+authorUrl: "https://www.linkedin.com/in/jbbrown1/"

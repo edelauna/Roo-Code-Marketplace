@@ -3,3 +3,5 @@ description: "A complete data platform solution including roles, servers, and st
 type: "package"
 version: "1.0.0"
 tags: ["data-platform", "enterprise", "data-engineering", "complete-solution"]
+author: "JB Brown"
+authorUrl: "https://www.linkedin.com/in/jbbrown1/"

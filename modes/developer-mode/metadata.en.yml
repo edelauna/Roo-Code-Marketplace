@@ -4,3 +4,5 @@ type: "mode"
 version: "1.0.0"
 tags: ["developer", "full-stack", "web", "database", "api"]
 sourceUrl: "https://github.com/roo-team/developer-resources"
+author: "JB Brown"
+authorUrl: "https://www.linkedin.com/in/jbbrown1/"

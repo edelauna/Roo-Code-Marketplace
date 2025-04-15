@@ -3,3 +3,5 @@ description: "An MCP server for processing and transforming data files with supp
 type: "mcp server"
 version: "1.0.0"
 tags: ["data-processing", "etl", "transformation", "data-engineering"]
+author: "JB Brown"
+authorUrl: "https://www.linkedin.com/in/jbbrown1/"
