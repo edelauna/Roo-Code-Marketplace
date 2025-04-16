@@ -1,6 +1,10 @@
 # Adding Packages
 
+Roo Code Package Manager is an un-released work in progress.....
+
 This guide explains how to create and contribute your own packages to the Roo Code Package Manager. By following these steps, you can share your components with the community and help expand the ecosystem.
+
+[Learn more about using packages in Roo Code](https://github.com/Smartsheet-JB-Brown/Roo-Code/blob/jbbrown/package-manager/cline_docs/package-manager/README.md)
 
 ## Package Structure and Metadata
 
