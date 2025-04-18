@@ -6,9 +6,9 @@ This guide explains how to create and contribute your own packages to the Roo Co
 
 [Learn more about using packages in Roo Code](https://github.com/Smartsheet-JB-Brown/Roo-Code/blob/jbbrown/package-manager/cline_docs/package-manager/README.md)
 
-## Package Structure and Metadata
+## Item Structure and Metadata
 
-Each package in the Package Manager requires specific metadata files and follows a consistent directory structure.
+Each item in the Marketplace requires specific metadata files and follows a consistent directory structure.
 
 ### Directory Structure
 
@@ -39,14 +39,14 @@ name: "My Package"
 description: "A detailed description of what this package does"
 version: "1.0.0"
 type: "package" # One of: package, mode, mcp server, prompt
-author: "Your name"
-authorUrl: "http://your.profile.url"
 tags:
     - tag1
     - tag2
 items: # Only for packages AND when a subcomponent isn't located in the packages directory tree
     - type: "prompt"
       path: "../shared-prompts/data-analysis" # Reference to component outside package directory
+author: "your name" # optional
+authorUrl: "http://your.profile.url/" #optional
 ```
 
 ### Package Example in Source Tree
@@ -71,18 +71,18 @@ Roo-Code-Packages/
             └── metadata.en.yml
 ```
 
-### Fields
+### Required Fields
 
 - **name**: A clear, descriptive name for your component
 - **description**: A detailed explanation of what your component does
 - **version**: Semantic version number (e.g., "1.0.0")
 - **type**: Component type (one of: "package", "mode", "mcp server", "prompt")
-- **author**: (Optional) Your name, if you want it shown in Roo-Code
-- **authorUrl**: (Optional) An http(s) link to your profile, github, linked-in, or something else that you want people to view when they click your name
 - **tags**: (Optional) Array of relevant tags for filtering
-- **items**: (Only for packages) Array of subcomponents with their type and path - when the path is not in the packages directory tree
-
-
+- **items**: (Only for packages) Array of subcomponents with their type and path - when the path is not in the packages directory
+ tree
+- **author**: Your name
+- **authorUrl**: A proile Url that you want people to see. GitHub profile, or linked-in profile for example
+- **sourceUrl**: optional destination Url to your item's source if you haven't included it directly in the Marketplace.
 
 ### The Items Array and External References
 
@@ -120,7 +120,7 @@ This allows you to:
 #### How It Works
 
 - The `path` is relative to the package's directory
-- The Package Manager resolves these paths when loading the package
+- The Marketplace resolves these paths when loading the package
 - Components referenced this way appear as part of the package in the UI
 - The same component can be included in multiple packages
 
@@ -131,7 +131,7 @@ You can provide metadata in multiple languages by using locale-specific files:
 **Important Notes on Localization:**
 
 - Only files with the pattern `metadata.{locale}.yml` are supported
-- The Package Manager will display metadata in the user's locale if available
+- The Marketplace will display metadata in the user's locale if available
 - If the user's locale is not available, it will fall back to English
 - The English locale (`metadata.en.yml`) is required as a fallback
 - Files without a locale code (e.g., just `metadata.yml`) are not supported
@@ -142,7 +142,7 @@ To contribute your package to the official repository, follow these steps:
 
 ### 1. Fork the Repository
 
-1. Visit the official Roo Code Packages repository: [https://github.com/RooVetGit/Roo-Code-Packages](https://github.com/RooVetGit/Roo-Code-Packages)
+1. Visit the official Roo Code Packages repository: [https://github.com/RooVetGit/Roo-Code-Marketplace](https://github.com/RooVetGit/Roo-Code-Marketplace)
 2. Click the "Fork" button in the top-right corner
 3. This creates your own copy of the repository where you can make changes
 
@@ -151,8 +151,8 @@ To contribute your package to the official repository, follow these steps:
 Clone your forked repository to your local machine:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/Roo-Code-Packages.git
-cd Roo-Code-Packages
+git clone https://github.com/YOUR-USERNAME/Roo-Code-Marketplace.git
+cd Roo-Code-Marketplace
 ```
 
 ### 3. Create Your Package
@@ -173,12 +173,12 @@ touch my-package/modes/my-mode/metadata.en.yml
 
 ### 4. Test Your Package
 
-Before submitting, test your package by adding your fork as a custom source in the Package Manager:
+Before submitting, test your package by adding your fork as a custom source in the Marketplace:
 
-1. In VS Code, open the Package Manager
+1. In VS Code, open the Marketplace
 2. Go to the "Settings" tab
 3. Click "Add Source"
-4. Enter your fork's URL (e.g., `https://github.com/YOUR-USERNAME/Roo-Code-Packages`)
+4. Enter your fork's URL (e.g., `https://github.com/YOUR-USERNAME/Roo-Code-Marketplace`)
 5. Click "Add"
 6. Verify that your package appears and functions correctly
 
@@ -194,7 +194,7 @@ git push origin main
 
 ### 6. Create a Pull Request
 
-1. Go to the original repository: [https://github.com/RooVetGit/Roo-Code-Packages](https://github.com/RooVetGit/Roo-Code-Packages)
+1. Go to the original repository: [https://github.com/RooVetGit/Roo-Code-Marketplace](https://github.com/RooVetGit/Roo-Code-Marketplace)
 2. Click "Pull Requests" and then "New Pull Request"
 3. Click "Compare across forks"
 4. Select your fork as the head repository
@@ -209,7 +209,7 @@ After submitting your pull request:
 1. Maintainers will review your package
 2. They may request changes or improvements
 3. Once approved, your package will be merged into the main repository
-4. Your package will be available to all users of the Package Manager
+4. Your package will be available to all users of the Marketplace
 
 ## Best Practices
 
@@ -274,13 +274,14 @@ tags:
     - preprocessing
 ```
 
-# Adding Custom Package Sources
+---
+# Adding Custom Marketplace Sources
 
-The Package Manager allows you to extend its functionality by adding custom package sources. This guide explains how to set up and manage your own package repositories to access additional components beyond the default offerings.
+The Marketplace allows you to extend its functionality by adding custom sources. This guide explains how to set up and manage your own Marktplace repositories to access additional components beyond the default offerings.
 
-## Setting up a Package Source Repository
+## Setting up a Marketplace Source Repository
 
-A package source repository is a Git repository that contains packages organized in a specific structure. You can create your own repository to host custom packages:
+A Marketplace source repository is a Git repository that contains Marketplace items organized in a specific structure. You can create your own repository to host custom packages:
 
 ### Repository Requirements
 
@@ -324,7 +325,7 @@ git push origin main
 
 ## Required Structure and Metadata
 
-A package source repository must follow a specific structure to be properly recognized by the Package Manager:
+A source repository must follow a specific structure to be properly recognized by the Marketplace:
 
 ### Repository Structure
 
@@ -355,7 +356,7 @@ repository-root/
 The root `metadata.en.yml` file describes the repository itself:
 
 ```yaml
-name: "Custom Components Repository"
+name: "Custom Roopository"
 description: "A collection of specialized components for data science workflows"
 version: "1.0.0"
 author: "Your Name or Organization"
@@ -364,28 +365,28 @@ tags:
     - data-science
 ```
 
-### Component Organization
+### Item Organization
 
-- Components should be organized by type in their respective directories
-- Each component must have its own directory containing a metadata file
-- Components can be nested within packages
+- Item should be organized by type in their respective directories
+- Each item must have its own directory containing a metadata file
+- Items can be nested within packages as subcomponents
 - Follow the same structure as described in [Adding Packages](./05-adding-packages.md)
 
 ## Adding Sources to Roo Code
 
-Once you have a properly structured package source repository, you can add it to your Roo Code Package Manager:
+Once you have a properly structured source repository, you can add it to your Roo Code Marketplace as a source:
 
 ### Default Package Source
 
-Roo Code comes with a default package source - this GitHub location!:
+Roo Code comes with a default package source:
 
-- URL: `https://github.com/RooVetGit/Roo-Code-Packages`
+- URL: `https://github.com/RooVetGit/Roo-Code-Marketplace`
 - This source is enabled by default, and anytime all sources have been deleted.
 
 ### Adding a New Source
 
 1. Open VS Code with the Roo Code extension
-2. Navigate to the Package Manager
+2. Navigate to the Marketplace
 3. Switch to the "Sources" tab
 4. Click the "Add Source" button
 5. Enter the repository URL:
@@ -398,11 +399,11 @@ Roo Code comes with a default package source - this GitHub location!:
 The "Sources" tab provides several options for managing your package sources:
 
 1. **Remove**: Delete a source from your configuration
-2. **Refresh**: Update the package list from a sources - this is forced git clone/pull to override local caching of data
+2. **Refresh**: Update the item list from a sources - this is forced git clone/pull to override local caching of data
 
 ### Source Caching and Refreshing
 
-Package Manager sources are cached to improve performance:
+Marketplace sources are cached to improve performance:
 
 - **Cache Duration**: Sources are cached for 1 hour (3600000 ms)
 - **Force Refresh**: To force an immediate refresh of a source:
@@ -416,13 +417,13 @@ If a source isn't loading properly:
 
 1. Check that the repository URL is correct
 2. Ensure the repository follows the required structure
-3. Look for error messages in the Package Manager interface
+3. Look for error messages in the Marketplace interface
 4. Try refreshing the sources list
 5. Disable and re-enable the source
 
 ## Creating Private Sources
 
-For team or organization use, you might want to create private package sources:
+For team or organization use, you might want to create private sources:
 
 ### Private Repository Setup
 
@@ -442,21 +443,21 @@ To access private repositories, you may need to:
 
 For teams and organizations:
 
-1. Designate maintainers responsible for the package source
-2. Establish quality standards for contributed packages
+1. Designate maintainers responsible for the source
+2. Establish quality standards for contributed items and packages
 3. Create a review process for new additions
 4. Document usage guidelines for team members
-5. Consider implementing versioning for your packages
+5. Consider implementing versioning for your items and packages
 
 ## Using Multiple Sources
 
-The Package Manager supports multiple package sources simultaneously:
+The Marketplace supports multiple sources simultaneously:
 
 ### Benefits of Multiple Sources
 
 - Access components from different providers
 - Separate internal and external components
-- Test new packages before contributing them to the main repository
+- Test new work before contributing them to the main repository
 - Create specialized sources for different projects or teams
 
 ### Source Management Strategy
@@ -464,4 +465,6 @@ The Package Manager supports multiple package sources simultaneously:
 1. Keep the default source enabled for core components
 2. Add specialized sources for specific needs
 3. Create a personal source for testing and development
-4. Refresh sources after you've pushed changes to them to get the latest components
+4. Refresh sources after you've pushed changes to them to get the latest items
+
+---
