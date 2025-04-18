@@ -1,10 +1,16 @@
-# Adding Packages
+# Welcome
 
-Roo Code Package Manager is an un-released work in progress.....
+Roo Code Marketplace is an un-released work in progress.....
 
-This guide explains how to create and contribute your own packages to the Roo Code Package Manager. By following these steps, you can share your components with the community and help expand the ecosystem.
+Imagine effortlessly gliding through your projects with the agility of a kangaroo on Roo mode! 🦘 Picture your data flowing seamlessly and powerfully through our mighty MCP servers, like a vibrant river of information! 🌊 And get ready to craft spells of efficiency and innovation with the perfect prompts – your secret incantations for mastery!
 
-[Learn more about using packages in Roo Code](https://github.com/Smartsheet-JB-Brown/Roo-Code/blob/jbbrown/package-manager/cline_docs/package-manager/README.md)
+Sharing is caring, and when you share your knowledge of Roo modes, MCP servers, and brilliant prompts, you're not just helping your team – you're spreading happiness throughout your organization! 😊 Watch as collaboration soars, productivity skyrockets, and smiles bloom across faces. It's a roovolution of joy and empowerment!
+
+So, dive in, explore the wonders of Roo modes, harness the strength of MCP servers, and play with the power of prompts. Unleash your superpowers and let the happiness flow! 🚀 You've got this! 💪
+
+This guide explains how to create and share Modes, MCPs, and Prompts to Roo Code users conviniently available right inside Roo.  
+
+[Learn more about using Roo Code Marketplace](https://github.com/Smartsheet-JB-Brown/Roo-Code/blob/jbbrown/marketplace/cline_docs/marketplace/README.md)
 
 ## Item Structure and Metadata
 
