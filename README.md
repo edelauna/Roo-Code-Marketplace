@@ -4,7 +4,7 @@ Roo Code Marketplace is an un-released work in progress.....
 
 Imagine effortlessly gliding through your projects with the agility of a kangaroo on Roo mode! 🦘 Picture your data flowing seamlessly and powerfully through our mighty MCP servers, like a vibrant river of information! 🌊 And get ready to craft spells of efficiency and innovation with the perfect prompts – your secret incantations for mastery!
 
-Sharing is caring, and when you share your knowledge of Roo modes, MCP servers, and brilliant prompts, you're not just helping your team – you're spreading happiness throughout your organization! 😊 Watch as collaboration soars, productivity skyrockets, and smiles bloom across faces. It's a roovolution of joy and empowerment!
+Sharing is caring, and when you share your knowledge of Roo modes, MCP servers, and brilliant prompts, you're not just helping your team – you're spreading happiness throughout the Roo community! 😊 Watch as collaboration soars, productivity skyrockets, and smiles bloom across faces. It's a roovolution of joy and empowerment!
 
 So, dive in, explore the wonders of Roo modes, harness the strength of MCP servers, and play with the power of prompts. Unleash your superpowers and let the happiness flow! 🚀 You've got this! 💪
 
