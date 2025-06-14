@@ -1,0 +1,14 @@
+name: "Github Code Semantic Search MCP Server"
+description: "An MCP server providing semantic code search capabilities using GitHub repositories."
+version: "0.0.1"
+type: "mcp"
+sourceUrl: "https://github.com/edelauna/github-semantic-search-mcp/tree/dev/config-packs"
+binaryUrl: "https://github.com/edelauna/github-semantic-search-mcp/blob/dev/config-packs/binary/github-semantic-search-server-mcp.zip"
+binaryHash: "E7SWhpYcxTm3Sq_1aj-aGbo5RgES-ZBugJw0C4JV0B8"
+tags:
+  - semantic
+  - search
+  - github
+  - mcp
+author: "edelauna"
+authorUrl: "https://github.com/edelauna"
